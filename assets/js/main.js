@@ -66,7 +66,21 @@
     };
     //////////////////////////////////////
 
-    
+    $('#skills').waypoint(function () {
+
+      $('.progress-bar').each(function () {
+
+          $(this).animate({
+              width: $(this).attr('aria-valuenow') + "%"
+          }, 1000);
+      });
+      this.destroy();
+
+    }, {
+        offset: '50%'
+    });
+    ///////////////////////////////////////
+
     // Initi AOS
     AOS.init({
       duration: 1000,
