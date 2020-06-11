@@ -6,7 +6,9 @@
       $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
     });
     ///////////////////////////
-
+    $('.navbar-nav>li>a').on('click', function(){
+      $('.navbar-collapse').collapse('hide');
+    });
     //Typed Text
     var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;
