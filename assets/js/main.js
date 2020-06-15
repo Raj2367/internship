@@ -5,10 +5,12 @@
       $('body').toggleClass('mobile-nav-active');
       $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
     });
-    ///////////////////////////
-    $('.navbar-nav>li>a').on('click', function(){
-      $('.navbar-collapse').collapse('hide');
+    
+    $('.mynav a').on('click', function(){
+      $('body').toggleClass('mobile-nav-active');
+      $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
     });
+    ///////////////////////////
     //Typed Text
     var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;
@@ -79,9 +81,16 @@
       this.destroy();
 
     }, {
-        offset: '50%'
+        offset: 'bottom-in-view'
     });
     ///////////////////////////////////////
+    // Close Navbar on click
+    // var navMain = $(".nav-collapse"); // avoid dependency on #id
+    // // "a:not([data-toggle])" - to avoid issues caused
+    // // when you have dropdown inside navbar
+    // navMain.on("click", "a", null, function () {
+    //      navMain.collapse('hide');
+    // });
 
     // Initi AOS
     AOS.init({
